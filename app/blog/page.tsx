@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import Link from "next/link"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CalendarIcon, Clock } from "lucide-react"
@@ -15,28 +16,6 @@ export const metadata: Metadata = {
 }
 
 const blogPosts = [
-  {
-    id: "top-5-pdf-to-image-tools-2025",
-    title: "Top 5 PDF to Image Conversion Tools in 2025",
-    description:
-      "Discover the best PDF to Image converters available online and offline. Compare features, pricing, and performance to find the perfect tool for your needs.",
-    date: "May 10, 2025",
-    readTime: "8 min read",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["PDF to Image", "Comparison", "Tools"],
-    slug: "/blog/top-5-pdf-to-image-tools-2025",
-  },
-  {
-    id: "convert-pdf-to-image-windows-mac",
-    title: "How to Convert PDF to Image on Windows, Mac, and Online",
-    description:
-      "Step-by-step guide to converting PDF to Image on different platforms. Learn the best methods for Windows, Mac, and browser-based PDF to Image conversion.",
-    date: "May 5, 2025",
-    readTime: "10 min read",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["Tutorial", "PDF to Image", "Windows", "Mac"],
-    slug: "/blog/convert-pdf-to-image-windows-mac",
-  },
   {
     id: "pdf-to-image-benefits",
     title: "PDF to Image Conversion: Benefits and Use Cases",
@@ -81,6 +60,28 @@ const blogPosts = [
     tags: ["PDF to Image", "Batch Processing", "Automation"],
     slug: "/blog/batch-pdf-to-image-conversion",
   },
+  {
+    id: "top-5-pdf-to-image-tools-2025",
+    title: "Top 5 PDF to Image Conversion Tools in 2025",
+    description:
+      "Discover the best PDF to Image converters available online and offline. Compare features, pricing, and performance to find the perfect tool for your needs.",
+    date: "May 10, 2025",
+    readTime: "8 min read",
+    image: "/placeholder.svg?height=200&width=400",
+    tags: ["PDF to Image", "Comparison", "Tools"],
+    slug: "/blog/top-5-pdf-to-image-tools-2025",
+  },
+  {
+    id: "convert-pdf-to-image-windows-mac",
+    title: "How to Convert PDF to Image on Windows, Mac, and Online",
+    description:
+      "Step-by-step guide to converting PDF to Image on different platforms. Learn the best methods for Windows, Mac, and browser-based PDF to Image conversion.",
+    date: "May 5, 2025",
+    readTime: "10 min read",
+    image: "/placeholder.svg?height=200&width=400",
+    tags: ["Tutorial", "PDF to Image", "Windows", "Mac"],
+    slug: "/blog/convert-pdf-to-image-windows-mac",
+  },
 ]
 
 export default function BlogPage() {
@@ -94,39 +95,43 @@ export default function BlogPage() {
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post) => (
-            <Card key={post.id} className="flex flex-col overflow-hidden">
-              <div className="relative h-48 w-full">
-                <Image
-                  src={post.image || "/placeholder.svg"}
-                  alt={`Illustration for ${post.title} - PDF to Image blog post`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <CardHeader className="flex-1">
-                <div className="flex flex-wrap gap-2 mb-2">
-                  {post.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="text-xs">
-                      {tag}
-                    </Badge>
-                  ))}
+            <Link key={post.id} href={post.slug} className="group">
+              <Card className="flex h-full flex-col overflow-hidden transition-all hover:shadow-md">
+                <div className="relative h-48 w-full overflow-hidden">
+                  <Image
+                    src={post.image || "/placeholder.svg"}
+                    alt={`Illustration for ${post.title} - PDF to Image blog post`}
+                    fill
+                    className="object-cover transition-transform group-hover:scale-105"
+                  />
                 </div>
-                <CardTitle className="line-clamp-2">{post.title}</CardTitle>
-                <CardDescription className="line-clamp-3">{post.description}</CardDescription>
-              </CardHeader>
-              <CardFooter className="border-t bg-muted/50 p-4">
-                <div className="flex w-full justify-between text-xs text-muted-foreground">
-                  <div className="flex items-center">
-                    <CalendarIcon className="mr-1 h-3 w-3" />
-                    {post.date}
+                <CardHeader className="flex-1">
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    {post.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary" className="text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
                   </div>
-                  <div className="flex items-center">
-                    <Clock className="mr-1 h-3 w-3" />
-                    {post.readTime}
+                  <CardTitle className="line-clamp-2 group-hover:text-primary transition-colors">
+                    {post.title}
+                  </CardTitle>
+                  <CardDescription className="line-clamp-3">{post.description}</CardDescription>
+                </CardHeader>
+                <CardFooter className="border-t bg-muted/50 p-4">
+                  <div className="flex w-full justify-between text-xs text-muted-foreground">
+                    <div className="flex items-center">
+                      <CalendarIcon className="mr-1 h-3 w-3" />
+                      {post.date}
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="mr-1 h-3 w-3" />
+                      {post.readTime}
+                    </div>
                   </div>
-                </div>
-              </CardFooter>
-            </Card>
+                </CardFooter>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>

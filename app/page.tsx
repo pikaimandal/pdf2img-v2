@@ -4,7 +4,7 @@ import { Converter } from "@/components/converter"
 export const metadata: Metadata = {
   title: "PDF to Image Converter | Free Online PDF to Image Tool | PDF2IMG",
   description:
-    "Best PDF to Image converter online. Convert PDF to PNG, JPG, JPEG, SVG images securely in your browser. Free PDF to Image tool with no uploads required. 100% private PDF to Image conversion.",
+    "Free PDF to Image converter. Transform PDF to PNG, JPG, JPEG, SVG securely in your browser with no uploads. 100% private conversion tool.",
 }
 
 export default function Home() {
