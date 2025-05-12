@@ -23,7 +23,7 @@ export default function Footer() {
     { name: "FAQ", path: "/faq" },
     { name: "Blog", path: "/blog" },
     { name: "About", path: "/about" },
-    { name: "Privacy Policy", path: "/privacy" },
+    { name: "Privacy", path: "/privacy" },
     { name: "Contact", path: "/contact" },
   ]
 
