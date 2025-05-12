@@ -20,6 +20,8 @@ export default function Footer() {
 
   const footerLinks = [
     { name: "Home", path: "/" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Blog", path: "/blog" },
     { name: "About", path: "/about" },
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Contact", path: "/contact" },
@@ -33,7 +35,7 @@ export default function Footer() {
             {mounted ? (
               <Image
                 src={logoSrc || "/placeholder.svg"}
-                alt="PDF2IMG Logo"
+                alt="PDF to Image Converter Logo - PDF2IMG"
                 width={120}
                 height={30}
                 className="h-6 w-auto"

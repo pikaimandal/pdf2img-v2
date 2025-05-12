@@ -1,26 +1,26 @@
-import type React from "react";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
+import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "PDF2IMG - Convert PDF to Images | Online PDF to Image Converter",
+  title: "PDF to Image Converter | Free Online PDF to Image Tool | PDF2IMG",
   description:
-    "Convert PDF files to images (PNG, JPG, JPEG, SVG) securely in your browser. No uploads, 100% private. Free online PDF to image converter.",
+    "Best PDF to Image converter online. Convert PDF to PNG, JPG, JPEG, SVG images securely in your browser. Free PDF to Image tool with no uploads required. 100% private PDF to Image conversion.",
   keywords:
-    "PDF to Image, PDF to PNG, PDF to JPG, PDF to JPEG, PDF to SVG, PDF2IMG, PDF to Image converter, Convert PDF into Images, PDF conversion, online PDF converter, PDF2IMG, secure PDF converter, private PDF conversion",
+    "PDF to Image, PDF to PNG, PDF to JPG, PDF to JPEG, PDF to SVG, PDF2IMG, PDF to Image converter, Convert PDF into Images, Best PDF to Image converter, Free PDF to Image conversion online, Convert PDF to Image securely, PDF conversion, online PDF converter, secure PDF converter, private PDF conversion",
   authors: [{ name: "PDF2IMG Team" }],
   creator: "PDF2IMG",
   publisher: "PDF2IMG",
   openGraph: {
     type: "website",
     url: "https://pdf2img.com",
-    title: "PDF2IMG - Convert PDF to Images",
+    title: "PDF to Image Converter | Free Online PDF to Image Tool",
     description: "Convert PDF files to images securely in your browser. No uploads, 100% private.",
     siteName: "PDF2IMG",
     images: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PDF2IMG - Convert PDF to Images",
+    title: "PDF to Image Converter | Free Online PDF to Image Tool",
     description: "Convert PDF files to images securely in your browser. No uploads, 100% private.",
     images: ["/pdf2imgwhitelogo.png"],
   },
@@ -47,21 +47,18 @@ export const metadata: Metadata = {
     canonical: "https://pdf2img.com",
   },
   generator: "PDF2IMG Team",
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-1EHEEG5E7D"
-        ></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EHEEG5E7D"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -80,8 +77,7 @@ export default function RootLayout({
               "@type": "WebApplication",
               name: "PDF2IMG",
               url: "https://pdf2img.com",
-              description:
-                "Convert PDF files to images securely in your browser. No uploads, 100% private.",
+              description: "Convert PDF files to images securely in your browser. No uploads, 100% private.",
               applicationCategory: "Utility",
               operatingSystem: "Any",
               offers: {
@@ -94,12 +90,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen flex-col">
             <Navbar />
             <main className="flex-1">{children}</main>
@@ -108,5 +99,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

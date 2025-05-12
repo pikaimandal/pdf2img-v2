@@ -24,6 +24,8 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", path: "/" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Blog", path: "/blog" },
     { name: "About", path: "/about" },
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Contact", path: "/contact" },
@@ -38,7 +40,7 @@ export default function Navbar() {
           {mounted ? (
             <Image
               src={logoSrc || "/placeholder.svg"}
-              alt="PDF2IMG Logo"
+              alt="PDF to Image Converter Logo - PDF2IMG"
               width={150}
               height={40}
               className="h-8 w-auto"

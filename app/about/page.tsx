@@ -3,9 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Shield, Lock, Zap, Globe } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "About PDF2IMG | Secure PDF to Image Conversion",
+  title: "About PDF to Image Converter | PDF2IMG - Secure PDF to Image Conversion",
   description:
-    "Learn about PDF2IMG's mission to provide secure, private, and free PDF to image conversion. Convert your PDFs to PNG, JPG, JPEG, or SVG without uploading files.",
+    "Learn about PDF2IMG's mission to provide the best PDF to Image converter online. Convert your PDFs to PNG, JPG, JPEG, or SVG without uploading files. Free and secure PDF to Image conversion.",
   openGraph: {
     title: "About PDF2IMG | Secure PDF to Image Conversion",
     description: "Learn about PDF2IMG's mission to provide secure, private, and free PDF to image conversion.",
@@ -16,9 +16,10 @@ export default function AboutPage() {
   return (
     <div className="container py-8 md:py-12">
       <div className="mx-auto max-w-4xl">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">About PDF2IMG</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">About Our PDF to Image Converter</h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          Our mission is to help users convert PDF to images securely and privately.
+          Our mission is to provide the best PDF to Image converter online, helping users convert PDF to images securely
+          and privately.
         </p>
 
         <div className="mt-8 space-y-8">
