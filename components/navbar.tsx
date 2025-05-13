@@ -10,6 +10,8 @@ import { Menu } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { ChevronDown } from "lucide-react"
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -29,6 +31,13 @@ export default function Navbar() {
     { name: "About", path: "/about" },
     { name: "Privacy", path: "/privacy" },
     { name: "Contact", path: "/contact" },
+  ]
+
+  const conversionItems = [
+    { name: "PDF to PNG", path: "/pdf-to-png" },
+    { name: "PDF to JPG", path: "/pdf-to-jpg" },
+    { name: "PDF to JPEG", path: "/pdf-to-jpeg" },
+    { name: "PDF to SVG", path: "/pdf-to-svg" },
   ]
 
   const logoSrc = theme === "dark" ? "/pdf2imgblacklogo.png" : "/pdf2imgwhitelogo.png"
@@ -64,6 +73,21 @@ export default function Navbar() {
                 <Link href={item.path}>{item.name}</Link>
               </Button>
             ))}
+
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="text-sm gap-1">
+                  Converters <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                {conversionItems.map((item) => (
+                  <DropdownMenuItem key={item.path} asChild>
+                    <Link href={item.path}>{item.name}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
           <ThemeToggle />
         </nav>
@@ -89,6 +113,20 @@ export default function Navbar() {
                     <Link href={item.path}>{item.name}</Link>
                   </Button>
                 ))}
+
+                <div className="px-4 py-2 font-medium">Converters</div>
+                {conversionItems.map((item) => (
+                  <Button
+                    key={item.path}
+                    asChild
+                    variant="ghost"
+                    className={cn("justify-start pl-6", pathname === item.path && "bg-muted font-medium")}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <Link href={item.path}>{item.name}</Link>
+                  </Button>
+                ))}
+
                 <div className="flex items-center">
                   <ThemeToggle />
                   <span className="ml-2 text-sm">Dark Mode On/Off</span>

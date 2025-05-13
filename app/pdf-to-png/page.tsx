@@ -1,0 +1,40 @@
+import type { Metadata } from "next"
+import { Converter } from "@/components/converter"
+import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "PDF to PNG Converter | Free Online PDF to PNG Tool | PDF2IMG",
+  description:
+    "Convert PDF to PNG online with our free tool. Transform PDF documents to high-quality PNG images with transparency support. No uploads, 100% private conversion.",
+}
+
+export default function PdfToPngPage() {
+  return (
+    <div className="container py-8 md:py-12">
+      <div className="mx-auto max-w-4xl text-center">
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">PDF to PNG Converter</h1>
+        <p className="mt-4 text-lg text-muted-foreground">
+          Transform your PDF documents into high-quality PNG images with our free converter. No uploads required, all
+          processing happens securely in your browser.
+        </p>
+      </div>
+
+      <Converter defaultFormat="png" />
+
+      <div className="mt-8 mx-auto max-w-3xl prose dark:prose-invert">
+        <p>
+          Our PDF to PNG converter transforms your PDF documents into high-quality PNG images while preserving
+          transparency and image quality. PNG is ideal for documents with text, graphics, and diagrams that require
+          crisp edges and transparency support. Unlike other formats, PNG uses lossless compression, ensuring your
+          converted images maintain perfect clarity and detail.
+        </p>
+        <p>
+          This free tool processes your files entirely in your browser - your PDFs are never uploaded to any server,
+          ensuring complete privacy and security. Try our other conversion options:
+          <Link href="/pdf-to-jpg"> PDF to JPG</Link>,<Link href="/pdf-to-jpeg"> PDF to JPEG</Link>, or
+          <Link href="/pdf-to-svg"> PDF to SVG</Link> for different use cases.
+        </p>
+      </div>
+    </div>
+  )
+}

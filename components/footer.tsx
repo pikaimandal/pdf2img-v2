@@ -27,40 +27,92 @@ export default function Footer() {
     { name: "Contact", path: "/contact" },
   ]
 
+  const conversionLinks = [
+    { name: "PDF to PNG", path: "/pdf-to-png" },
+    { name: "PDF to JPG", path: "/pdf-to-jpg" },
+    { name: "PDF to JPEG", path: "/pdf-to-jpeg" },
+    { name: "PDF to SVG", path: "/pdf-to-svg" },
+  ]
+
   return (
     <footer className="w-full border-t bg-background">
-      <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
-        <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-          <Link href="/" className="flex items-center gap-2">
-            {mounted ? (
-              <Image
-                src={logoSrc || "/placeholder.svg"}
-                alt="PDF to Image Converter Logo - PDF2IMG"
-                width={120}
-                height={30}
-                className="h-6 w-auto"
-              />
-            ) : (
-              <div className="h-6 w-24 bg-muted animate-pulse rounded" />
-            )}
-          </Link>
-          <p className="text-center text-sm text-muted-foreground md:text-left">
+      <div className="container py-10">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
+          <div className="flex flex-col">
+            <Link href="/" className="flex items-center gap-2 mb-4">
+              {mounted ? (
+                <Image
+                  src={logoSrc || "/placeholder.svg"}
+                  alt="PDF to Image Converter Logo - PDF2IMG"
+                  width={120}
+                  height={30}
+                  className="h-6 w-auto"
+                />
+              ) : (
+                <div className="h-6 w-24 bg-muted animate-pulse rounded" />
+              )}
+            </Link>
+            <p className="text-sm text-muted-foreground">
+              Free online PDF to Image converter. Convert your PDF files to images securely in your browser.
+            </p>
+            <div className="mt-4">
+              <ThemeToggle />
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-medium mb-4">Pages</h3>
+            <ul className="space-y-2">
+              {footerLinks.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    href={link.path}
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-medium mb-4">Converters</h3>
+            <ul className="space-y-2">
+              {conversionLinks.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    href={link.path}
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-medium mb-4">Legal</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/privacy" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-8 border-t pt-6">
+          <p className="text-center text-sm text-muted-foreground">
             &copy; {currentYear} pdf2img.com. All rights reserved.
           </p>
-        </div>
-        <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
-          <nav className="flex gap-4 sm:gap-6">
-            {footerLinks.map((link) => (
-              <Link
-                key={link.path}
-                href={link.path}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </nav>
-          <ThemeToggle />
         </div>
       </div>
     </footer>

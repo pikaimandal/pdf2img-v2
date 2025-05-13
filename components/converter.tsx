@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { FileUploader } from "@/components/file-uploader"
 import { ConversionOptions } from "@/components/conversion-options"
 import { PDFPreview } from "@/components/pdf-preview"
@@ -14,14 +14,23 @@ import { usePdfToImage } from "@/hooks/use-pdf-to-image"
 export type ImageFormat = "png" | "jpg" | "jpeg" | "svg"
 export type Resolution = 72 | 150 | 300
 
-export function Converter() {
+interface ConverterProps {
+  defaultFormat?: ImageFormat
+}
+
+export function Converter({ defaultFormat = "png" }: ConverterProps) {
   const [file, setFile] = useState<File | null>(null)
-  const [format, setFormat] = useState<ImageFormat>("png")
+  const [format, setFormat] = useState<ImageFormat>(defaultFormat)
   const [resolution, setResolution] = useState<Resolution>(150)
   const [isConverting, setIsConverting] = useState(false)
   const [convertedImages, setConvertedImages] = useState<string[]>([])
   const { toast } = useToast()
   const { convertPdfToImages } = usePdfToImage()
+
+  // Update format when defaultFormat prop changes
+  useEffect(() => {
+    setFormat(defaultFormat)
+  }, [defaultFormat])
 
   const handleFileChange = (file: File | null) => {
     setFile(file)
