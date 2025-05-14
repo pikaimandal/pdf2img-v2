@@ -24,9 +24,8 @@ export default function PdfToPngPage() {
       <div className="mt-8 mx-auto max-w-3xl prose dark:prose-invert">
         <p>
           Our PDF to PNG converter transforms your PDF documents into high-quality PNG images while preserving
-          transparency and image quality. PNG is ideal for documents with text, graphics, and diagrams that require
-          crisp edges and transparency support. Unlike other formats, PNG uses lossless compression, ensuring your
-          converted images maintain perfect clarity and detail.
+          transparency and image quality. PNG is the go-to format for documents that feature text, graphics, and diagrams, as it keeps those sharp edges and supports transparency beautifully. Unlike other formats, 
+          PNG uses lossless compression, which means your converted images will look just as clear and detailed as the originals.
         </p>
         <p>
           This free tool processes your files entirely in your browser - your PDFs are never uploaded to any server,
