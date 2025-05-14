@@ -23,10 +23,8 @@ export default function PdfToSvgPage() {
 
       <div className="mt-8 mx-auto max-w-3xl prose dark:prose-invert">
         <p>
-          Our PDF to SVG converter transforms your PDF documents into scalable vector graphics that maintain perfect
-          quality at any size. SVG is ideal for logos, icons, diagrams, and illustrations that need to be resized
-          without losing quality. Unlike raster formats (PNG, JPG), SVG files use mathematical formulas to define
-          shapes, resulting in crisp edges at any resolution.
+          Our PDF to SVG converter is here to turn your PDF documents into Scalable Vector Graphics(SVG) that look fantastic at any size. SVG is perfect for logos, icons, diagrams, and illustrations that you want to resize without any loss of quality. Unlike raster formats like PNG or JPG, 
+          SVG files use mathematical formulas to create shapes, which means you get sharp edges no matter the resolution.
         </p>
         <p>
           This free tool processes your files entirely in your browser - your PDFs are never uploaded to any server,
