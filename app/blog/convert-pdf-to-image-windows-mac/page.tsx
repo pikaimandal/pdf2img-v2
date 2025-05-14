@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: "Step-by-step guide to converting PDF to Image on different platforms.",
     images: [
       {
-        url: "/placeholder.svg?height=630&width=1200",
+        url: "/how-to-convert-pdf-to-image.png?height=630&width=1200",
         width: 1200,
         height: 630,
         alt: "How to Convert PDF to Image on Windows, Mac, and Online",
