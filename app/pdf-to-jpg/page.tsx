@@ -23,10 +23,8 @@ export default function PdfToJpgPage() {
 
       <div className="mt-8 mx-auto max-w-3xl prose dark:prose-invert">
         <p>
-          Our PDF to JPG converter transforms your PDF documents into optimized JPG images with excellent file size
-          compression. JPG is perfect for photographs and complex images where file size efficiency matters. This format
-          provides smaller file sizes than PNG while maintaining good visual quality, making it ideal for sharing on
-          social media, websites, or via email.
+          Our PDF to JPG converter is here to turn your PDF documents into beautifully optimized JPG images, all while keeping file sizes in check. JPG is the go-to format for photos and intricate images where size really counts. It offers smaller file sizes compared to PNG, 
+          yet still delivers great visual quality, making it perfect for sharing on social media, websites, or through email.
         </p>
         <p>
           This free tool processes your files entirely in your browser - your PDFs are never uploaded to any server,
