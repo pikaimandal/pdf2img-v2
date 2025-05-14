@@ -15,7 +15,7 @@ const blogPosts = [
       "Explore the advantages of converting PDF to Image and discover practical applications across different industries and scenarios.",
     date: "April 28, 2025",
     readTime: "7 min read",
-    image: "/placeholder.svg?height=400&width=800",
+    image: "/pdf-to-image-benefits.png?height=400&width=800",
     tags: ["PDF to Image", "Benefits", "Use Cases"],
   },
   {
@@ -25,7 +25,7 @@ const blogPosts = [
       "Expert tips to achieve the best quality when converting PDF to Image. Learn about resolution, format selection, and optimization techniques.",
     date: "April 20, 2025",
     readTime: "9 min read",
-    image: "/placeholder.svg?height=400&width=800",
+    image: "/optimize-pdf-to-image-quality.png?height=400&width=800",
     tags: ["PDF to Image", "Quality", "Optimization"],
   },
   {
@@ -35,7 +35,7 @@ const blogPosts = [
       "Learn how to safely convert PDF to Image while maintaining document security and privacy. Best practices for handling sensitive information.",
     date: "April 15, 2025",
     readTime: "6 min read",
-    image: "/placeholder.svg?height=400&width=800",
+    image: "/secure-pdf-to-image-conversion.png?height=400&width=800",
     tags: ["PDF to Image", "Security", "Privacy"],
   },
   {
@@ -45,7 +45,7 @@ const blogPosts = [
       "Efficient techniques for converting multiple PDFs to images simultaneously. Save time with batch processing and automation.",
     date: "April 8, 2025",
     readTime: "8 min read",
-    image: "/placeholder.svg?height=400&width=800",
+    image: "/batch-pdf-to-image-conversion.png?height=400&width=800",
     tags: ["PDF to Image", "Batch Processing", "Automation"],
   },
 ]
