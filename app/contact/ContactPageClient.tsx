@@ -32,7 +32,7 @@ export default function ContactPageClient() {
     formData.append("_captcha", "false")
 
     try {
-      const res = await fetch("https://formsubmit.co/contact@pdf2img.com", {
+      const res = await fetch("https://formsubmit.co/792e0e4fc38cc448ca6075377eec0b45", {
         method: "POST",
         body: formData,
         headers: {
