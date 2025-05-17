@@ -17,27 +17,53 @@ export default function ContactPageClient() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { toast } = useToast()
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
-      // In a real app, you would send this data to your backend or a mailto link
-      console.log({ name, email, message })
+    // Prepare form data for Formsubmit
+    const formData = new FormData()
+    formData.append("name", name)
+    formData.append("email", email)
+    formData.append("message", message)
+    // Spam protection (honeypot)
+    formData.append("_honey", "")
+    // Disable CAPTCHA
+    formData.append("_captcha", "false")
 
-      // Show success message
-      toast({
-        title: "Message sent",
-        description: "Thank you for your message. We'll get back to you soon.",
+    try {
+      const res = await fetch("https://formsubmit.co/contact@pdf2img.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
       })
 
-      // Reset form
-      setName("")
-      setEmail("")
-      setMessage("")
+      if (res.ok) {
+        toast({
+          title: "Message sent",
+          description: "Thank you for your message. We'll get back to you soon.",
+        })
+        setName("")
+        setEmail("")
+        setMessage("")
+      } else {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again later or email us directly.",
+          variant: "destructive"
+        })
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later or email us directly.",
+        variant: "destructive"
+      })
+    } finally {
       setIsSubmitting(false)
-    }, 1000)
+    }
   }
 
   return (
@@ -86,6 +112,10 @@ export default function ContactPageClient() {
                     required
                   />
                 </div>
+                {/* Honeypot field for spam protection */}
+                <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+                {/* Disable CAPTCHA */}
+                <input type="hidden" name="_captcha" value="false" />
               </CardContent>
               <CardFooter>
                 <Button type="submit" disabled={isSubmitting} className="w-full">
