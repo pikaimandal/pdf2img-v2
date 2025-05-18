@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "PDF to SVG Converter | Free Online PDF to SVG Tool | PDF2IMG",
   description:
     "Convert PDF to SVG online with our free tool. Transform PDF documents to scalable vector graphics. No uploads, 100% private conversion.",
+  alternates: {
+    canonical: "https://pdf2img.com/pdf-to-svg",
+  },
 }
 
 export default function PdfToSvgPage() {
