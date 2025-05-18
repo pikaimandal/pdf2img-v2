@@ -8,7 +8,7 @@ import { CalendarIcon, Clock } from "lucide-react"
 export const metadata: Metadata = {
   title: "PDF to Image Conversion Blog | Tips & Tutorials | PDF2IMG",
   description:
-    "Learn about PDF to Image conversion with our expert guides, tutorials, and tips. Discover the best PDF to Image converters, formats, and techniques for all your document needs.",
+    "PDF to Image conversion with our expert guides. Discover the best PDF to Image converters, formats, and techniques for all your document needs.",
   openGraph: {
     title: "PDF to Image Conversion Blog | Tips & Tutorials",
     description: "Expert guides and tutorials on PDF to Image conversion techniques and tools.",
