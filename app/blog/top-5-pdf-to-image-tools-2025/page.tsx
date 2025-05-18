@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       },
     images: [
       {
-        url: "/placeholder.svg?height=630&width=1200",
+        url: "/top-5-pdf-to-image-tools.png?height=630&width=1200",
         width: 1200,
         height: 630,
         alt: "Top 5 PDF to Image Conversion Tools in 2025",
