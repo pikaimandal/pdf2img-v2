@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     title: "PDF to Image Conversion FAQ | PDF2IMG",
     description: "Frequently asked questions about PDF to Image conversion. Learn how to convert PDF to Image online.",
   },
+    alternates: {
+    canonical: "https://pdf2img.com/faq",
+  },
 }
 
 export default function FAQPage() {
