@@ -9,6 +9,25 @@ export const metadata: Metadata = {
     title: "Privacy Policy | PDF2IMG - Secure PDF to Image Conversion",
     description:
       "PDF2IMG's privacy policy. Learn how we protect your data with our 100% client-side PDF to image converter.",
+    url: "https://pdf2img.com/privacy",
+    type: "website",
+    images: [
+      {
+        url: "https://pdf2img.com/pdf2imgwhitelogo.png", 
+        width: 1200,
+        height: 630,
+        alt: "PDF2IMG - Convert PDF to Images",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | PDF2IMG - Secure PDF to Image Conversion",
+    description:
+      "PDF2IMG's privacy policy. Learn how we protect your data with our 100% client-side PDF to image converter.",
+    image: "https://pdf2img.com/pdf2imgwhitelogo.png", 
+    site: "@pdf2img",
   },
   alternates: {
     canonical: "https://pdf2img.com/privacy",
