@@ -12,6 +12,25 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PDF to Image Conversion Blog | Tips & Tutorials",
     description: "Expert guides and tutorials on PDF to Image conversion techniques and tools.",
+    url: "https://pdf2img.com/blog",
+    type: "website",
+    images: [
+      {
+        url: "https://pdf2img.com/pdf2imgwhitelogo.png",
+        width: 1200,
+        height: 630,
+        alt: "PDF2IMG - Convert PDF to Images",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PDF to Image Conversion Blog | Tips & Tutorials | PDF2IMG",
+    description:
+      "Learn about PDF to Image conversion with our expert guides, tutorials, and tips. Discover the best PDF to Image converters, formats, and techniques for all your document needs.",
+    image: "https://pdf2img.com/pdf2imgwhitelogo.png",
+    site: "@pdf2img",
   },
   alternates: {
     canonical: "https://pdf2img.com/blog",
