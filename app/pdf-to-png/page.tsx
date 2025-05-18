@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "PDF to PNG Converter | Free Online PDF to PNG Tool | PDF2IMG",
   description:
     "Convert PDF to PNG online with our free tool. Transform PDF documents to high-quality PNG images with transparency support. No uploads, 100% private conversion.",
+  alternates: {
+    canonical: "https://pdf2img.com/pdf-to-png",
+  },
 }
 
 export default function PdfToPngPage() {
