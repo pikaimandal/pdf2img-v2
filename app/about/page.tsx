@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     title: "About PDF2IMG | Secure PDF to Image Conversion",
     description: "Learn about PDF2IMG's mission to provide secure, private, and free PDF to image conversion.",
   },
+  alternates: {
+    canonical: "https://pdf2img.com/about",
+  },
 }
 
 export default function AboutPage() {
