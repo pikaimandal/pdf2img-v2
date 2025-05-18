@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Shield, Lock, Zap, Globe } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "About PDF to Image Converter | PDF2IMG - Secure PDF to Image Conversion",
+  title: "About PDF2IMG - PDF to Image Converter | Secure PDF to Image Conversion",
   description:
     "Learn about PDF2IMG's mission to provide the best PDF to Image converter online. Convert your PDFs to PNG, JPG, JPEG, or SVG without uploading files. Free and secure PDF to Image conversion.",
   openGraph: {
