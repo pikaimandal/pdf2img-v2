@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description:
       "PDF2IMG Terms of Service. Learn about your rights and responsibilities when using our secure, client-side PDF to image converter.",
   },
+    alternates: {
+    canonical: "https://pdf2img.com/blog",
+  },
 }
 
 export default function TermsPage() {
