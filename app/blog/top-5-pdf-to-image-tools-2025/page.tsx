@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Top 5 PDF to Image Conversion Tools in 2025",
     description: "Discover the best PDF to Image converters of 2025. Compare features, pricing, and performance.",
+      alternates: {
+      canonical: "https://pdf2img.com/https://pdf2img.com/blog/top-5-pdf-to-image-tools-2025",
+      },
     images: [
       {
         url: "/placeholder.svg?height=630&width=1200",
