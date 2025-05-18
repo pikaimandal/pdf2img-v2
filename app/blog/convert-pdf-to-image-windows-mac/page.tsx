@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "How to Convert PDF to Image on Windows, Mac, and Online",
     description: "Step-by-step guide to converting PDF to Image on different platforms.",
+      alternates: {
+       canonical: "https://pdf2img.com/blog/convert-pdf-to-image-windows-mac",
+      },
     images: [
       {
         url: "/how-to-convert-pdf-to-image.png?height=630&width=1200",
