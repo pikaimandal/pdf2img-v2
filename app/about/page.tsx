@@ -9,6 +9,24 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About PDF2IMG | Secure PDF to Image Conversion",
     description: "Learn about PDF2IMG's mission to provide secure, private, and free PDF to image conversion.",
+    url: "https://pdf2img.com/about",
+    type: "website",
+    images: [
+      {
+        url: "https://pdf2img.com/pdf2imgwhitelogo.png",
+        width: 1200,
+        height: 630,
+        alt: "PDF2IMG - Convert PDF to Images",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About PDF to Image Converter | PDF2IMG - Secure PDF to Image Conversion",
+    description: "Learn about PDF2IMG's mission to provide the best PDF to Image converter online. Convert your PDFs to PNG, JPG, JPEG, or SVG without uploading files. Free and secure PDF to Image conversion.",
+    image: "https://pdf2img.com/pdf2imgwhitelogo.png",
+    site: "@pdf2img",
   },
   alternates: {
     canonical: "https://pdf2img.com/about",
