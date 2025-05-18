@@ -10,8 +10,27 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PDF to Image Conversion FAQ | PDF2IMG",
     description: "Frequently asked questions about PDF to Image conversion. Learn how to convert PDF to Image online.",
+    url: "https://pdf2img.com/faq",
+    type: "website",
+    images: [
+      {
+        url: "https://pdf2img.com/pdf2imgwhitelogo.png",
+        width: 1200,
+        height: 630,
+        alt: "PDF2IMG - Convert PDF to Images",
+        type: "image/png",
+      },
+    ],
   },
-    alternates: {
+  twitter: {
+    card: "summary_large_image",
+    title: "PDF to Image Conversion FAQ | PDF2IMG",
+    description:
+      "Frequently asked questions about PDF to Image conversion. Learn how to convert PDF to Image, best formats, and why our free PDF to Image converter is safe and secure.",
+    image: "https://pdf2img.com/pdf2imgwhitelogo.png",
+    site: "@pdf2img",
+  },
+  alternates: {
     canonical: "https://pdf2img.com/faq",
   },
 }
