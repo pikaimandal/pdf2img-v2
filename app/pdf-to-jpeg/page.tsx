@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "PDF to JPEG Converter | Free Online PDF to JPEG Tool | PDF2IMG",
   description:
     "Convert PDF to JPEG online with our free tool. Transform PDF documents to JPEG images with excellent compression. No uploads, 100% private conversion.",
+  alternates: {
+    canonical: "https://pdf2img.com/pdf-to-jpeg",
+  },
 }
 
 export default function PdfToJpegPage() {
