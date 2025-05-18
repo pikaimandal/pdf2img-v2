@@ -72,7 +72,7 @@ export default function TermsPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p>
-                All trademarks, logos, and content related to PDF2IMG are the property of their respective owners. You may not use our branding or code without explicit permission.
+                All trademarks, logos, and content related to PDF2IMG are the property PDF2IMG.com. You may not use our branding or code without explicit permission.
               </p>
             </CardContent>
           </Card>
