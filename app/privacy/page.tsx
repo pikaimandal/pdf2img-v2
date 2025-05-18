@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description:
       "PDF2IMG's privacy policy. Learn how we protect your data with our 100% client-side PDF to image converter.",
   },
+  alternates: {
+    canonical: "https://pdf2img.com/privacy",
+  },
 }
 
 export default function PrivacyPage() {
