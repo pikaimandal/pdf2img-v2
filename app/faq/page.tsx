@@ -6,7 +6,7 @@ import Script from "next/script"
 export const metadata: Metadata = {
   title: "PDF to Image Conversion FAQ | PDF2IMG",
   description:
-    "Frequently asked questions about PDF to Image conversion. Learn how to convert PDF to Image, best formats, and why our free PDF to Image converter is safe and secure.",
+    "FAQ about PDF to Image conversion. Learn how to convert PDF to Image, best formats, and why our free PDF to Image converter is safe and secure.",
   openGraph: {
     title: "PDF to Image Conversion FAQ | PDF2IMG",
     description: "Frequently asked questions about PDF to Image conversion. Learn how to convert PDF to Image online.",
