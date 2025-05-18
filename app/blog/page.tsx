@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     title: "PDF to Image Conversion Blog | Tips & Tutorials",
     description: "Expert guides and tutorials on PDF to Image conversion techniques and tools.",
   },
+  alternates: {
+    canonical: "https://pdf2img.com/blog",
+  },
 }
 
 const blogPosts = [
