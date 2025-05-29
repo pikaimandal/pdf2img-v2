@@ -3,13 +3,16 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
 import { useState, useEffect } from "react"
+import { ShoppingCart } from "lucide-react"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
   const { theme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const [showBuyButton, setShowBuyButton] = useState(true) // Easy toggle for visibility
 
   // After mounting, we can safely show the UI that depends on the theme
   useEffect(() => {
@@ -33,6 +36,10 @@ export default function Footer() {
     { name: "PDF to JPEG", path: "/pdf-to-jpeg" },
     { name: "PDF to SVG", path: "/pdf-to-svg" },
   ]
+
+  const handleBuyClick = () => {
+    window.open("https://www.escrow.com/checkout?token=ab5ae755-fb71-4464-9211-5eab54ad50f2", "_blank")
+  }
 
   return (
     <footer className="w-full border-t bg-background">
@@ -106,6 +113,20 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+            
+            {/* Buy PDF2IMG Button - positioned below legal section */}
+            {showBuyButton && (
+              <div className="mt-6">
+                <Button 
+                  onClick={handleBuyClick}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-2 px-4 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
+                  size="default"
+                >
+                  <ShoppingCart className="mr-2 h-4 w-4" />
+                  Buy PDF2IMG
+                </Button>
+              </div>
+            )}
           </div>
         </div>
 
