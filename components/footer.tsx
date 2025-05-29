@@ -38,7 +38,7 @@ export default function Footer() {
   ]
 
   const handleBuyClick = () => {
-    window.open("https://www.escrow.com/checkout?token=ab5ae755-fb71-4464-9211-5eab54ad50f2", "_blank")
+    window.open("https://www.escrow.com/checkout?token=92d3bd68-d282-44f5-bc6f-531f8f11495d", "_blank")
   }
 
   return (
