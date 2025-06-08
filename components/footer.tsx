@@ -12,7 +12,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
   const { theme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const [showBuyButton, setShowBuyButton] = useState(true) // Easy toggle for visibility
+  const [showBuyButton, setShowBuyButton] = useState(false) // Easy toggle for visibility
 
   // After mounting, we can safely show the UI that depends on the theme
   useEffect(() => {
