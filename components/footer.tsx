@@ -12,7 +12,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
   const { theme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const [showBuyButton, setShowBuyButton] = useState(false) // Easy toggle for visibility
+  const [showBuyButton, setShowBuyButton] = useState(true) // Easy toggle for visibility
 
   // After mounting, we can safely show the UI that depends on the theme
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function Footer() {
   ]
 
   const handleBuyClick = () => {
-    window.open("https://www.escrow.com/checkout?token=92d3bd68-d282-44f5-bc6f-531f8f11495d", "_blank")
+    window.open("https://www.atom.com/name/PDF2IMG", "_blank")
   }
 
   return (
