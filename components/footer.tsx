@@ -38,7 +38,7 @@ export default function Footer() {
   ]
 
   const handleBuyClick = () => {
-    window.open("https://www.atom.com/name/pdf2img", "_blank")
+    window.open("https://checkoutlink.godaddy.com/1ada4c7b-930e-4af6-9fa3-5964a0eca288", "_blank")
   }
 
   return (
