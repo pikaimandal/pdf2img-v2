@@ -134,9 +134,9 @@ export default function ContactPageClient() {
 
           <div className="mt-8 text-center">
             <p className="text-muted-foreground">Alternatively, you can email us directly at:</p>
-            <a href="mailto:contact@pdf2img.com" className="mt-2 inline-flex items-center text-primary hover:underline">
+            <a href="mailto:pdf2imgcom@gmail.com" className="mt-2 inline-flex items-center text-primary hover:underline">
               <Mail className="mr-2 h-4 w-4" />
-              contact@pdf2img.com
+              pdf2imgcom@gmail.com
             </a>
           </div>
         </div>
