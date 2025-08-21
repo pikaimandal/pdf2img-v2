@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Converter } from "@/components/converter"
 import Link from "next/link"
+import AdsterraBanner from "@/components/AdsterraBanner"
 
 export const metadata: Metadata = {
   title: "PDF to SVG Converter | Free Online PDF to SVG Tool | PDF2IMG",
@@ -21,7 +22,9 @@ export default function PdfToSvgPage() {
           all processing happens securely in your browser.
         </p>
       </div>
-
+      {/* ---- Adsterra Native Banner Ad ---- */}
+      <AdsterraBanner />
+      {/* ---- End Ad ---- */}
       <Converter defaultFormat="svg" />
 
       <div className="mt-8 mx-auto max-w-3xl prose dark:prose-invert">
