@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Converter } from "@/components/converter"
 import Link from "next/link"
+import AdsterraBanner from "@/components/AdsterraBanner"
 
 export const metadata: Metadata = {
   title: "PDF to PNG Converter | Free Online PDF to PNG Tool | PDF2IMG",
@@ -15,15 +16,18 @@ export default function PdfToPngPage() {
   return (
     <div className="container py-8 md:py-12">
       <div className="mx-auto max-w-4xl text-center">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">PDF to PNG Converter</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+          PDF to PNG Converter
+        </h1>
         <p className="mt-4 text-lg text-muted-foreground">
           Transform your PDF documents into high-quality PNG images with our free converter. No uploads required, all
           processing happens securely in your browser.
         </p>
       </div>
-
+      {/* ---- Adsterra Native Banner Ad ---- */}
+      <AdsterraBanner />
+      {/* ---- End Ad ---- */}
       <Converter defaultFormat="png" />
-
       <div className="mt-8 mx-auto max-w-3xl prose dark:prose-invert">
         <p>
           Our PDF to PNG converter transforms your PDF documents into high-quality PNG images while preserving
