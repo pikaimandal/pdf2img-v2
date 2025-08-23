@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { Converter } from "@/components/converter"
 import Link from "next/link"
-import AdsterraBanner from "@/components/AdsterraBanner"
 
 export const metadata: Metadata = {
   title: "PDF to JPEG Converter | Free Online PDF to JPEG Tool | PDF2IMG",
@@ -22,9 +21,7 @@ export default function PdfToJpegPage() {
           processing happens securely in your browser.
         </p>
       </div>
-      {/* ---- Adsterra Native Banner Ad ---- */}
-      <AdsterraBanner />
-      {/* ---- End Ad ---- */}
+
       <Converter defaultFormat="jpeg" />
 
       <div className="mt-8 mx-auto max-w-3xl prose dark:prose-invert">
